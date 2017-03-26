@@ -14,7 +14,8 @@ import java.util.List;
 
 /**
  * Interface pour la récupération de commandes
- * de l'unité de persistence.
+ * dans l'unité de persistence.
+ * TODO déplacé dans la partie DATA associée.
  * @author ronan - Metabeen
  */
 public interface IDaoOrder extends IDaoGeneric<Order, Integer> {

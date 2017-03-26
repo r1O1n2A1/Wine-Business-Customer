@@ -10,6 +10,13 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+/**
+ * Classe permettant l'accès à l'unité de persistence
+ * dans l'application pour les commandes.
+ * TODO déplacer cette classe dans la partie DATA associée.
+ * @author Metabeen
+ *
+ */
 @Service
 @Transactional
 public class DaoOrder extends DaoGeneric<Order, Integer> implements IDaoOrder {
