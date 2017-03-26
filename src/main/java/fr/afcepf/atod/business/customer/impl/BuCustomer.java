@@ -61,7 +61,7 @@ public class BuCustomer implements IBuCustomer {
 					WineErrorCode.RECHERCHE_NON_PRESENTE_EN_BASE,
 					mail + " or " + password
 					+ " -  invalid");
-			log.info(e);
+			log.debug(e);
 		}
 		if (wineException != null) {
 			throw wineException;
@@ -78,7 +78,7 @@ public class BuCustomer implements IBuCustomer {
 		try {
 			daoCustomer.insertObj(customer);
 		} catch (WineException e) {
-			log.info(e);
+			log.debug(e);
 		}
 		return customer;		
 	}
