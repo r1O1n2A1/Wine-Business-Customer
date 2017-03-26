@@ -9,8 +9,9 @@ import fr.afcepf.atod.wine.entity.User;
  * and open the template in the editor.
  */
 /**
- *
- * @author ronan
+ * Interface pour les règles de gestion associé au
+ * client dans l'application.
+ * @author ronan - metabeen
  */
 public interface IBuCustomer {
 	/**

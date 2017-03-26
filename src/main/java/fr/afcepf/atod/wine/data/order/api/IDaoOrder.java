@@ -13,19 +13,33 @@ import java.util.List;
  */
 
 /**
- *
- * @author ronan
+ * Interface pour la récupération de commandes
+ * de l'unité de persistence.
+ * @author ronan - Metabeen
  */
 public interface IDaoOrder extends IDaoGeneric<Order, Integer> {
 
     /**
-     * recuperer les commande du customer
-     *
-     * @return
+     * Méthode permettant la récupération des {@link Order}
+     * en utilisant l'identifiant d'un client.
+     * @return un objet {@link Customer}.
      * @throws WineException
+     * <ul>
+     * <li>Absence de commandes liées à l'indentifiant dans l'unité de persistence.</li>
+     * </ul>
      */
-    Customer ordersCustomerById(Integer idCustumer) throws WineException;
-
+    Customer ordersCustomerById(Integer idCustomer) throws WineException;
+    /**
+     * Méthode permettant la récupération des {@link Order}
+     * en utilisant un objet {@link Customer}.
+     * @param customer un objet {@link Customer} dont on souhaite
+     * obtenir la liste des commandes.
+     * @return une {@link List} d'objets {@link Order}.
+     * @throws WineException
+     * <ul>
+     * <li>Absence de commandes liées à l'indentifiant dans l'unité de persistence.</li>
+     * </ul>
+     */
     List<Order> getAllOrdersByCustomer(Customer customer) throws WineException;
 
 }

@@ -19,11 +19,19 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 
 /**
- *
- * @author ronan
+ * Classe générée pour l'execution de tests.
+ * TODO Renommer la classe et convertir en tests unitaires.
+ * @author ronan - Metabeen
  */
 public class testDaoOrder {
-    private static Logger log = Logger.getLogger(testDaoOrder.class);
+	/**
+	 * Logger de log 4j pour les codes d'erreur.
+	 */
+	private static Logger log = Logger.getLogger(testDaoOrder.class);
+	/**
+	 * Point d'entrée de l'application pour les tests.
+	 * @param args Inutilisé dans ce contexte.
+	 */
     public static void main(String[] args) {
         log.info("\t # Debut du test #");
         try {

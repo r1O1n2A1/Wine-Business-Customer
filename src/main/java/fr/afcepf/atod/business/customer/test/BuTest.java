@@ -14,10 +14,19 @@ import fr.afcepf.atod.wine.entity.Civility;
 import fr.afcepf.atod.wine.entity.Country;
 import fr.afcepf.atod.wine.entity.Customer;
 import fr.afcepf.atod.wine.entity.Region;
-
+/**
+ * Clase générée pour l'execution de tests.
+ *TODO Convertir en tests unitaires.
+ * @author Metabeen
+ *
+ */
 public class BuTest {
 	private static Logger log = Logger.getLogger(BuTest.class);
-
+	/**
+	 * Point d'entrée des tests de la méthode.
+	 * @param args non utilisé dans ce contexte.
+	 * @throws WineException
+	 */
 	public static void main(String[] args) throws WineException {
 		@SuppressWarnings("resource")
 		BeanFactory bf = new ClassPathXmlApplicationContext("classpath:springBuCustomer.xml");
@@ -28,11 +37,7 @@ public class BuTest {
 		City city=new City(null, "test", "test", region);
 		Adress adr=new Adress(null, "test", "test", true, city);
 		Customer test = new Customer(null, "test", "test", new Date(), "test", "test", "test", "test", new Date(), new Date(), Civility.MISS, adr, true);
-
 		test =bu.addNewCustomer(test);
-		
-		
-		
 		//		List<City> list = new ArrayList<City>();
 //		list = bu.findAllCities();
 //		for (City city : list) {

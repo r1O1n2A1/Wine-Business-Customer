@@ -10,17 +10,26 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Service;
 
 @Service
 public class JavaMail  {
-
+	/**
+	 * Logger de log 4j pour les codes d'erreur.
+	 */
+	private static Logger log = Logger.getLogger(JavaMail.class);
+	/**
+	 * Constructeur vide.
+	 */
 	private JavaMail() {
 	}
-
-
+	/**
+	 * M�thode pour l'envoie d'email dans l'application
+	 * en utilisant l'interface javax.mail.
+	 * @param mail String du mail du destinataire.
+	 */
 	public static void sendMail(String mail){
-
 		final String username = "webwinemania@gmail.com";
 		final String password = "Webwinemania2016";
 		Properties props = new Properties();
@@ -34,7 +43,6 @@ public class JavaMail  {
 				return new PasswordAuthentication(username, password);
 			}
 		});
-
 		try {
 			Message message = new MimeMessage(session);
 			message.setFrom(new InternetAddress("webwinemania@gmail.com"));
@@ -50,8 +58,7 @@ public class JavaMail  {
 					+ "\n\n > Un accès VIP à nos ventes privées réservées aux abonnés,"
 					+ "\n\n + la chance de GAGNER UN MAGNUM chaque semaine !");
 			Transport.send(message);
-
-			System.out.println("Done");
+			log.info("Done");
 
 		} catch (MessagingException e) {
 			throw new RuntimeException(e);

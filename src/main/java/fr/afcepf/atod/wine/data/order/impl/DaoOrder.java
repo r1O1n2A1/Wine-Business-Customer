@@ -29,7 +29,7 @@ public class DaoOrder extends DaoGeneric<Order, Integer> implements IDaoOrder {
 
     @Override
     public Customer ordersCustomerById(Integer idCustomer) throws WineException {
-        Customer customer = null;
+        Customer customer;
         if(idCustomer!=null){
         customer = (Customer)getSf().getCurrentSession()
                             .createQuery(REQ_LIST_CMD_BYID)
@@ -51,7 +51,7 @@ public class DaoOrder extends DaoGeneric<Order, Integer> implements IDaoOrder {
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<Order> getAllOrdersByCustomer(Customer customer) throws WineException{
-		List<Order> liste = null;
+		List<Order> liste;
 		liste = getSf().getCurrentSession().createQuery(REQORDERSBYCUSTOMER).setParameter("paramOrder", customer)
 				.list();
 		return liste;
