@@ -13,30 +13,42 @@ import fr.afcepf.atod.wine.entity.User;
  * @author ronan
  */
 public interface IBuCustomer {
-
-    /**
-     *
-     * @param mail
-     * @param password
-     * @return
-     * @throws WineException
-     */
-    User connect(String mail, String password) throws WineException;
-
-    /**
-     * 
-     * @param id
-     * @return
-     * @throws WineException 
-     */
-    User findUserById(int id) throws WineException;
-    /**
-     * 
-     * @param customer
-     * @return
-     * @throws WineException 
-     */
-    Customer addNewCustomer(Customer customer) throws WineException;  
-    
-   
+	/**
+	 * Méthode permettant la vérification par son mail et son password
+	 * de son existence dans la base de donné et retourne un {@link User}.
+	 * @param mail Paramètre de type String.
+	 * @param password Paramètre de type String.
+	 * @return Un {@link User}.
+	 * @throws WineException
+	 * <ul>
+	 * <li>Le mail ou le password n'existent pas dans la base,</li>
+	 * <li>les contraintes de saisies ne sont pas respectées,</li>
+	 * <li>l'unité de persistence est inaccessible.</li>
+	 * </ul>
+	 */
+	User connect(String mail, String password) throws WineException;
+	/**
+	 * Méthode permettant de récupérer un {@link User} dans l'unité de persistence.
+	 * @param id Paramètre de type int.
+	 * @return un {@link User}.
+	 * @throws WineException 
+	 * <ul>
+	 * <li>L'identifiant en argument ne correspond à aucun utilisateur
+	 * dans l'unité de persistence,</li>
+	 * <li>les contraintes de saisies ne sont pas respectées,</li>
+	 * <li>l'unité de persistence est inaccessible.</li>
+	 * </ul>
+	 */
+	User findUserById(int id) throws WineException;
+	/**
+	 * Méthode permettant l'ajout d'un {@link User} dans l'unité de persistence.
+	 * @param customer un {@link Customer} ajouté dans la base de donné avec son identifiant.
+	 * @return un {@link Customer}.
+	 * @throws WineException 
+	 * <ul>
+	 * <li>Les contraintes de saisies ne sont pas respectées,</li>
+	 * <li>l'unité de persistence est inaccessible.</li>
+	 * </ul>
+	 */
+	Customer addNewCustomer(Customer customer) throws WineException;  
 }
