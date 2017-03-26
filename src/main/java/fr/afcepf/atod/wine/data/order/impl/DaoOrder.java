@@ -16,17 +16,13 @@ public class DaoOrder extends DaoGeneric<Order, Integer> implements IDaoOrder {
     /*****************************************************
      *                  Requetes HQL
      ****************************************************/
-     
     private static final String REQ_LIST_CMD_BYID = "SELECT DISTINCT(c) FROM Customer c "
             + "left join fetch c.orders as o left join fetch o.ordersDetail "
             + "WHERE c.id = :idCustomer";    
-    private static final String REQORDERSBYCUSTOMER = "FROM Order o fetch left join FETCH o.customers WHERE o =:paramOrder";
-
-    
+    private static final String REQORDERSBYCUSTOMER = "FROM Order o fetch left join FETCH o.customers WHERE o =:paramOrder"; 
     /*****************************************************
      *              Fin Requetes HQL                    
      ****************************************************/
-
     @Override
     public Customer ordersCustomerById(Integer idCustomer) throws WineException {
         Customer customer;
@@ -45,10 +41,7 @@ public class DaoOrder extends DaoGeneric<Order, Integer> implements IDaoOrder {
         }
         return customer;
     }
-    
-
-
-	@SuppressWarnings("unchecked")
+   	@SuppressWarnings("unchecked")
 	@Override
 	public List<Order> getAllOrdersByCustomer(Customer customer) throws WineException{
 		List<Order> liste;
