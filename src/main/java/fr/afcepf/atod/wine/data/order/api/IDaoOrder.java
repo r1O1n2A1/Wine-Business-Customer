@@ -13,32 +13,32 @@ import java.util.List;
  */
 
 /**
- * Interface pour la récupération de commandes
- * dans l'unité de persistence.
- * TODO déplacé dans la partie DATA associée.
+ * Interface pour la rÃ©cupÃ©ration de commandes
+ * dans l'unitÃ© de persistence.
+ * TODO dÃ©placÃ© dans la partie DATA associÃ©e.
  * @author ronan - Metabeen
  */
 public interface IDaoOrder extends IDaoGeneric<Order, Integer> {
 
     /**
-     * Méthode permettant la récupération des {@link Order}
+     * MÃ©thode permettant la rÃ©cupÃ©ration des {@link Order}
      * en utilisant l'identifiant d'un client.
      * @return un objet {@link Customer}.
      * @throws WineException
      * <ul>
-     * <li>Absence de commandes liées à l'indentifiant dans l'unité de persistence.</li>
+     * <li>Absence de commandes liÃ©es Ã  l'indentifiant dans l'unitÃ© de persistence.</li>
      * </ul>
      */
     Customer ordersCustomerById(Integer idCustomer) throws WineException;
     /**
-     * Méthode permettant la récupération des {@link Order}
+     * MÃ©thode permettant la rÃ©cupÃ©ration des {@link Order}
      * en utilisant un objet {@link Customer}.
      * @param customer un objet {@link Customer} dont on souhaite
      * obtenir la liste des commandes.
      * @return une {@link List} d'objets {@link Order}.
      * @throws WineException
      * <ul>
-     * <li>Absence de commandes liées à l'indentifiant dans l'unité de persistence.</li>
+     * <li>Absence de commandes liÃ©es Ã  l'indentifiant dans l'unite de persistence.</li>
      * </ul>
      */
     List<Order> getAllOrdersByCustomer(Customer customer) throws WineException;

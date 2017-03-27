@@ -6,7 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import fr.afcepf.atod.wine.data.order.api.IDaoOrder;
 /**
- * Classe générée pour l'execution de tests.
+ * Classe gÃ©nÃ©rÃ©e pour l'execution de tests.
  * TODO Convertir en tests unitaires.
  * @author Metabeen
  *
@@ -17,9 +17,9 @@ public class DaoOrderTest {
 	 */
 	private static Logger log = Logger.getLogger(DaoOrderTest.class);
 	/**
-	 * Point d'entrée de l'application
+	 * Point d'entrÃ©e de l'application
 	 * pour les tests.
-	 * @param args Inutilisé dans ce contexte.
+	 * @param args InutilisÃ© dans ce contexte.
 	 */
 	public static void main(String[] args) {
 		@SuppressWarnings("resource")

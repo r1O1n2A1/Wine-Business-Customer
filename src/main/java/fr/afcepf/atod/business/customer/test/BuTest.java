@@ -15,7 +15,7 @@ import fr.afcepf.atod.wine.entity.Country;
 import fr.afcepf.atod.wine.entity.Customer;
 import fr.afcepf.atod.wine.entity.Region;
 /**
- * Clase générée pour l'execution de tests.
+ * Classe gÃ©nÃ©rÃ©ee pour l'execution de tests.
  *TODO Convertir en tests unitaires.
  * @author Metabeen
  *
@@ -23,8 +23,8 @@ import fr.afcepf.atod.wine.entity.Region;
 public class BuTest {
 	private static Logger log = Logger.getLogger(BuTest.class);
 	/**
-	 * Point d'entrée des tests de la méthode.
-	 * @param args non utilisé dans ce contexte.
+	 * Point d'entrÃ©e des tests de la mÃ©thode.
+	 * @param args non utilisÃ© dans ce contexte.
 	 * @throws WineException
 	 */
 	public static void main(String[] args) throws WineException {

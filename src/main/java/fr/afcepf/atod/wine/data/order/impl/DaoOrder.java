@@ -11,9 +11,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Classe permettant l'accès à l'unité de persistence
+ * Classe permettant l'accÃ¨s Ã  l'unitÃ© de persistence
  * dans l'application pour les commandes.
- * TODO déplacer cette classe dans la partie DATA associée.
+ * TODO dÃ©placer cette classe dans la partie DATA associÃ©e.
  * @author Metabeen
  *
  */

@@ -9,46 +9,46 @@ import fr.afcepf.atod.wine.entity.User;
  * and open the template in the editor.
  */
 /**
- * Interface pour les règles de gestion associé au
+ * Interface pour les rÃ¨gles de gestion associÃ©es au
  * client dans l'application.
  * @author ronan - metabeen
  */
 public interface IBuCustomer {
 	/**
-	 * Méthode permettant la vérification par son mail et son password
-	 * de son existence dans la base de donné et retourne un {@link User}.
-	 * @param mail Paramètre de type String.
-	 * @param password Paramètre de type String.
+	 * MÃ©thode permettant la vÃ©rification par son mail et son password
+	 * de son existence dans l'unitÃ© de persistence et retourne un {@link User}.
+	 * @param mail ParamÃ¨tre de type String.
+	 * @param password ParamÃ¨tre de type String.
 	 * @return Un {@link User}.
 	 * @throws WineException
 	 * <ul>
 	 * <li>Le mail ou le password n'existent pas dans la base,</li>
-	 * <li>les contraintes de saisies ne sont pas respectées,</li>
-	 * <li>l'unité de persistence est inaccessible.</li>
+	 * <li>les contraintes de saisies ne sont pas respectÃ©es,</li>
+	 * <li>l'unitÃ© de persistence est inaccessible.</li>
 	 * </ul>
 	 */
 	User connect(String mail, String password) throws WineException;
 	/**
-	 * Méthode permettant de récupérer un {@link User} dans l'unité de persistence.
-	 * @param id Paramètre de type int.
+	 * Mï¿½thode permettant de rï¿½cupï¿½rer un {@link User} dans l'unitï¿½ de persistence.
+	 * @param id Paramï¿½tre de type int.
 	 * @return un {@link User}.
 	 * @throws WineException 
 	 * <ul>
-	 * <li>L'identifiant en argument ne correspond à aucun utilisateur
-	 * dans l'unité de persistence,</li>
-	 * <li>les contraintes de saisies ne sont pas respectées,</li>
-	 * <li>l'unité de persistence est inaccessible.</li>
+	 * <li>L'identifiant en argument ne correspond ï¿½ aucun utilisateur
+	 * dans l'unitï¿½ de persistence,</li>
+	 * <li>les contraintes de saisies ne sont pas respectï¿½es,</li>
+	 * <li>l'unitï¿½ de persistence est inaccessible.</li>
 	 * </ul>
 	 */
 	User findUserById(int id) throws WineException;
 	/**
-	 * Méthode permettant l'ajout d'un {@link User} dans l'unité de persistence.
-	 * @param customer un {@link Customer} ajouté dans la base de donné avec son identifiant.
+	 * Mï¿½thode permettant l'ajout d'un {@link User} dans l'unitï¿½ de persistence.
+	 * @param customer un {@link Customer} ajoutï¿½ dans la base de donnï¿½ avec son identifiant.
 	 * @return un {@link Customer}.
 	 * @throws WineException 
 	 * <ul>
-	 * <li>Les contraintes de saisies ne sont pas respectées,</li>
-	 * <li>l'unité de persistence est inaccessible.</li>
+	 * <li>Les contraintes de saisies ne sont pas respectï¿½es,</li>
+	 * <li>l'unitï¿½ de persistence est inaccessible.</li>
 	 * </ul>
 	 */
 	Customer addNewCustomer(Customer customer) throws WineException;  

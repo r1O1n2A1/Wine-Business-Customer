@@ -18,7 +18,7 @@ import fr.afcepf.atod.wine.entity.User;
 
 /**
  * Class permettant la gestion du client de 
- * l'application. Implémentation de l'interface
+ * l'application. ImplÃ©mentation de l'interface
  * business customer.
  * @author ronan - metabeen
  */
