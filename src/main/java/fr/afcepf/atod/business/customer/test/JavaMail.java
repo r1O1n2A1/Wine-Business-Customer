@@ -25,7 +25,7 @@ public class JavaMail  {
 	private JavaMail() {
 	}
 	/**
-	 * Méthode pour l'envoie d'email dans l'application
+	 * Mï¿½thode pour l'envoie d'email dans l'application
 	 * en utilisant l'interface javax.mail.
 	 * @param mail String du mail du destinataire.
 	 */
