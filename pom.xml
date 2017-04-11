@@ -15,6 +15,10 @@
 			<artifactId>easymock</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>${project.parent.groupId}</groupId>
 			<artifactId>Wine-Data-Customer</artifactId>
 			<version>${project.parent.version}</version>
