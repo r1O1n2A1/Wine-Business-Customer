@@ -8,8 +8,12 @@
 		<relativePath>../Wine-Parent/pom.xml</relativePath>
 	</parent>
 	<artifactId>Wine-Business-Customer</artifactId>
-	<packaging>jar</packaging>	
+	<packaging>jar</packaging>
 	<dependencies>
+		<dependency>
+			<groupId>org.easymock</groupId>
+			<artifactId>easymock</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>${project.parent.groupId}</groupId>
 			<artifactId>Wine-Data-Customer</artifactId>
