@@ -58,7 +58,7 @@ public class TestConnectBuCustomer {
      * le mot de passe.
      */
     private WineException exceptionMauvaisIdentifiant;
-    /**
+	/**
      * Initialisation des variables de test.
      */
     public  TestConnectBuCustomer() {

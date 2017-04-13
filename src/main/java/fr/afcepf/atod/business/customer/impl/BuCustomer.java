@@ -13,6 +13,7 @@ import fr.afcepf.atod.business.customer.api.IBuCustomer;
 import fr.afcepf.atod.customer.data.api.IDaoCustomer;
 import fr.afcepf.atod.vin.data.exception.WineErrorCode;
 import fr.afcepf.atod.vin.data.exception.WineException;
+import fr.afcepf.atod.wine.data.util.DaoUtil;
 import fr.afcepf.atod.wine.entity.Customer;
 import fr.afcepf.atod.wine.entity.User;
 
@@ -40,11 +41,11 @@ public class BuCustomer implements IBuCustomer {
 		User user = null;
 		WineException wineException = null;
 		try {
-			if (!mail.equalsIgnoreCase("")
-					&& !password.equalsIgnoreCase("")) {
+			if (!mail.equalsIgnoreCase(DaoUtil.EMPTY_STR)
+					&& !password.equalsIgnoreCase(DaoUtil.EMPTY_STR)) {
 				user = daoCustomer.connect(mail, password);
-				if (!user.getLastname().equalsIgnoreCase("")) {
-					//TODO return user
+				if (!user.getLastname().equalsIgnoreCase(DaoUtil.EMPTY_STR)) {
+					//get user.
 				} else {
 					wineException = new WineException(
 							WineErrorCode.RECHERCHE_NON_PRESENTE_EN_BASE,
